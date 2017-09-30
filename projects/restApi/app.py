@@ -3,7 +3,7 @@ from flask import request
 import requests
 import json
 
-from requests import Response
+from requests.models import Response
 from projects.restApi.utils.config_util import get_config
 from projects.restApi.utils.mongo_util import mongodb
 

@@ -1,6 +1,11 @@
 import redis
 
-POOL = redis.ConnectionPool(host='localhost', port=6379, db=0)
+from projects.restApi.utils.config_util import get_config
+
+configs = get_config()
+redis_uri = configs['DATA']['REDIS_HOST']
+host, port = redis_uri.split(':')
+POOL = redis.ConnectionPool(host=host, port=port, db=0)
 
 
 def get_connection():

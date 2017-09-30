@@ -141,3 +141,6 @@ tmtagsHistory
 *.sublime-project
 *.sublime-workspace
 .bundle
+
+# ini files
+*.ini
